@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4 - Matrícula</title>
+</head>
+<body>
+    <script>
+        const costoCredito = 360;
+        let nombre, añoAcademico, creditos, cuota = 0, totalCreditos;
+
+        nombre = prompt("Ingresa tu nombre:");
+        añoAcademico = prompt("Ingresa tu año académico (freshman, sophomore, junior, senior):").toLowerCase();
+        creditos = parseInt(prompt("Ingresa el número de créditos:"));
+
+        if (añoAcademico === "freshman") cuota = 50;
+        else if (añoAcademico === "sophomore") cuota = 75;
+        else cuota = 100;
+
+        totalCreditos = creditos > 12 ? 4320 : creditos * costoCredito;
+        alert(`${nombre}, tu matrícula total es $${totalCreditos + cuota}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 11 - Iteración</title>
+</head>
+<body>
+    <p id="mensaje">Estado Inicial</p>
+    <button onclick="startLoop()">Iniciar</button>
+    <button onclick="stopLoop()">Detener</button>
+    <script>
+        let interval;
+        function startLoop() {
+            interval = setInterval(() => {
+                const mensaje = document.getElementById("mensaje");
+                mensaje.textContent = mensaje.textContent === "Estado 1" ? "Estado 2" : "Estado 1";
+            }, 1000);
+        }
+        function stopLoop() {
+            clearInterval(interval);
+        }
+    </script>
+</body>
+</html>
